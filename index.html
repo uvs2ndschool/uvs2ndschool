@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Увс аймгийн Улаангом хотын 2-р сургуулийн албан ёсны вебсайт.">
+
+  <title>Увс аймгийн 2-р сургууль</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">2</span>
+      <span>
+        <strong>УВС АЙМГИЙН 2-Р СУРГУУЛЬ</strong>
+        <small>Мэдлэг · Хөгжил · Ирээдүй</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="navigation">
+      ☰
+    </button>
+
+    <nav id="navigation" class="navigation">
+      <a href="index.html">Нүүр</a>
+      <a href="pages/about.html">Танилцуулга</a>
+      <a href="pages/events.html">Арга хэмжээ</a>
+
+      <div class="dropdown">
+        <button class="dropdown-button"
+                aria-expanded="false">
+          Амжилт ▾
+        </button>
+
+        <div class="dropdown-content">
+          <a href="pages/achievements.html#school">
+            Сургуулийн амжилт
+          </a>
+          <a href="pages/achievements.html#students">
+            Сурагчдын амжилт
+          </a>
+          <a href="pages/achievements.html#teachers">
+            Багшийн амжилт
+          </a>
+        </div>
+      </div>
+
+      <a href="pages/archive.html">Архив</a>
+      <a href="pages/gallery.html">Зураг, видео</a>
+      <a href="pages/contact.html">Холбоо барих</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-content">
+      <p class="eyebrow">ТАВТАЙ МОРИЛНО УУ</p>
+
+      <h1>
+        Бидний ирээдүй<br>
+        <span>эндээс эхэлнэ.</span>
+      </h1>
+
+      <p class="hero-description">
+        Эрдэм мэдлэг, авьяас чадвар,
+        хамтын хөгжлийн төлөө.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="button button-yellow"
+           href="pages/about.html">
+          Сургуулийн тухай
+        </a>
+
+        <a class="button button-outline"
+           href="pages/events.html">
+          Арга хэмжээ
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container quick-links">
+    <a class="quick-card" href="pages/about.html">
+      <span class="quick-icon">⌂</span>
+      <span>
+        <strong>Танилцуулга</strong>
+        <small>Манай сургууль</small>
+      </span>
+    </a>
+
+    <a class="quick-card" href="pages/events.html">
+      <span class="quick-icon">▦</span>
+      <span>
+        <strong>Арга хэмжээ</strong>
+        <small>Үйл ажиллагаа</small>
+      </span>
+    </a>
+
+    <a class="quick-card" href="pages/achievements.html">
+      <span class="quick-icon">★</span>
+      <span>
+        <strong>Амжилт</strong>
+        <small>Бидний бахархал</small>
+      </span>
+    </a>
+
+    <a class="quick-card" href="pages/archive.html">
+      <span class="quick-icon">▤</span>
+      <span>
+        <strong>Архив</strong>
+        <small>Өмнөх мэдээлэл</small>
+      </span>
+    </a>
+  </section>
+
+  <section class="container section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow blue">ШИНЭ МЭДЭЭ</p>
+        <h2>Мэдээ, мэдээлэл</h2>
+      </div>
+
+      <a class="text-link" href="pages/archive.html">
+        Бүх мэдээ →
+      </a>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card-image image-blue">МЭДЭЭ</div>
+        <div class="card-body">
+          <span class="tag">Сургуулийн мэдээ</span>
+          <h3>Мэдээний гарчиг</h3>
+          <p>
+            Сургуулийн шинэ мэдээллийн товч агуулгыг
+            энд бичнэ.
+          </p>
+          <a class="text-link" href="pages/archive.html">
+            Дэлгэрэнгүй →
+          </a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image image-green">АРГА ХЭМЖЭЭ</div>
+        <div class="card-body">
+          <span class="tag">Үйл ажиллагаа</span>
+          <h3>Арга хэмжээний мэдээлэл</h3>
+          <p>
+            Огноо, байршил болон арга хэмжээний
+            тайлбарыг энд оруулна.
+          </p>
+          <a class="text-link" href="pages/events.html">
+            Дэлгэрэнгүй →
+          </a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image image-yellow">АМЖИЛТ</div>
+        <div class="card-body">
+          <span class="tag">Бидний бахархал</span>
+          <h3>Сурагчдын амжилт</h3>
+          <p>
+            Олимпиад, тэмцээн, уралдааны бодит
+            амжилтыг нийтэлнэ.
+          </p>
+          <a class="text-link" href="pages/achievements.html">
+            Дэлгэрэнгүй →
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="achievement-banner">
+    <div class="container banner-inner">
+      <div>
+        <p class="eyebrow">БИДНИЙ БАХАРХАЛ</p>
+        <h2>Амжилт бүрийн ард<br>хичээл зүтгэл бий.</h2>
+      </div>
+
+      <a class="button button-yellow"
+         href="pages/achievements.html">
+        Амжилтуудыг үзэх
+      </a>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow blue">СУРГУУЛИЙН АМЬДРАЛ</p>
+        <h2>Зураг, видео</h2>
+      </div>
+
+      <a class="text-link" href="pages/gallery.html">
+        Цомог үзэх →
+      </a>
+    </div>
+
+    <div class="gallery-preview">
+      <a href="pages/gallery.html" class="gallery-box">
+        Сургуулийн үйл ажиллагаа
+      </a>
+
+      <a href="pages/gallery.html" class="gallery-box">
+        Арга хэмжээ
+      </a>
+
+      <a href="pages/gallery.html" class="gallery-box">
+        Сурагчдын бүтээл
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>УВС АЙМГИЙН 2-Р СУРГУУЛЬ</strong>
+      <p>Мэдлэг · Хөгжил · Ирээдүй</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="pages/about.html">Танилцуулга</a>
+      <a href="pages/archive.html">Архив</a>
+      <a href="pages/contact.html">Холбоо барих</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span>
+    Увс аймгийн Улаангом хотын 2-р сургууль
+  </div>
+</footer>
+</body>
+</html>
