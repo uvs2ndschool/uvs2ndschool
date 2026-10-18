@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Зураг байрлуулах хэрэгсэл</title>
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+  }
+
+  .layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .controls {
+    width: 250px;
+    flex-shrink: 0;
+  }
+
+  .controls label {
+    display: block;
+    margin: 18px 0 6px;
+  }
+
+  .controls input {
+    width: 100%;
+  }
+
+  .canvas {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 2px solid #173D70;
+    background: #eee;
+  }
+
+  #picture {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+
+  @media (max-width: 850px) {
+    .layout {
+      flex-direction: column;
+    }
+
+    .canvas {
+      width: min(500px, 100%);
+      height: auto;
+      aspect-ratio: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <div class="controls">
+    <h2>Зургийн тохиргоо</h2>
+
+    <label>Зураг сонгох</label>
+    <input type="file" id="file" accept="image/*">
+
+    <label>X байрлал: <span id="xVal">0</span></label>
+    <input type="range" id="x" min="0" max="500" value="0">
+
+    <label>Y байрлал: <span id="yVal">0</span></label>
+    <input type="range" id="y" min="0" max="500" value="0">
+
+    <label>Өргөн: <span id="wVal">150</span> px</label>
+    <input type="range" id="w" min="10" max="500" value="150">
+
+    <label>Өндөр: <span id="hVal">150</span> px</label>
+    <input type="range" id="h" min="10" max="500" value="150">
+
+    <p id="coordinates">X: 0, Y: 0</p>
+  </div>
+
+  <div class="canvas">
+    <img id="picture" alt="Сонгосон зураг">
+  </div>
+</div>
+
+<script>
+const picture = document.getElementById("picture");
+const file = document.getElementById("file");
+
+file.addEventListener("change", () => {
+  if (file.files[0]) {
+    picture.src = URL.createObjectURL(file.files[0]);
+  }
+});
+
+function update() {
+  const x = +document.getElementById("x").value;
+  const y = +document.getElementById("y").value;
+  const w = +document.getElementById("w").value;
+  const h = +document.getElementById("h").value;
+
+  picture.style.left = x + "px";
+  picture.style.top = y + "px";
+  picture.style.width = w + "px";
+  picture.style.height = h + "px";
+
+  document.getElementById("xVal").textContent = x;
+  document.getElementById("yVal").textContent = y;
+  document.getElementById("wVal").textContent = w;
+  document.getElementById("hVal").textContent = h;
+  document.getElementById("coordinates").textContent =
+    `X: ${x}, Y: ${y}, Өргөн: ${w}, Өндөр: ${h}`;
+}
+
+document.querySelectorAll('input[type="range"]')
+  .forEach(input => input.addEventListener("input", update));
+</script>
+
+</body>
+</html>
